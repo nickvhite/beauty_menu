@@ -1,0 +1,212 @@
+body{
+    background: black;
+}
+
+.top-nav-button {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-position: center center;
+    color: #fff;
+    z-index: 2;
+}
+
+.main-nav-toggle .lines,
+.main-nav-toggle .lines:after,
+.main-nav-toggle .lines:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    -ms-transform: translate(-7px, -7px);
+    transform: translate(-7px, -7px);
+    border-radius: 1px;
+    transition: width .8s cubic-bezier(.19, 1, .22, 1) .3s;
+}
+
+.main-nav-toggle .lines:before {
+    -ms-transform: translate(0,7px);
+    transform: translate(0,7px);
+    transition-delay: 250ms;
+}
+
+.main-nav-toggle .lines:after {
+    -ms-transform: translate(0,14px);
+    transform: translate(0,14px);
+    transition-delay: .2s;
+}
+
+.main-nav-toggle .lines:after,
+.main-nav-toggle .lines:before {
+    top: 0;
+}
+
+.main-nav-toggle .cross {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-8px,-9px);
+    transform: translate(-8px,-9px);
+}
+
+.main-nav-toggle .cross:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 0;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: width .8s cubic-bezier(.19,1,.22,1) 50ms;
+}
+
+.main-nav-toggle .cross-diagonal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    -ms-transform: translate(-1px,0) rotate(-45deg);
+    transform: translate(-1px,0) rotate(-45deg);
+}
+
+.main-nav-toggle .cross-diagonal:after,
+.main-nav-toggle .cross-diagonal:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 2px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+    transition: width .5s cubic-bezier(.19,1,.22,1);
+}
+
+.main-nav-toggle .cross-diagonal:after {
+    left: auto;
+    margin-left: 0;
+    right: 100%;
+    margin-right: 2px;
+}
+
+.main-nav-toggle.is-active .lines,
+.main-nav-toggle.is-active .lines:after,
+.main-nav-toggle.is-active .lines:before {
+    width: 0;
+}
+
+.main-nav-toggle.is-active .lines {
+    transition-delay: 0s;
+}
+
+.main-nav-toggle.is-active .lines:before {
+    transition-delay: 50ms;
+}
+
+.main-nav-toggle.is-active .lines:after {
+    transition-delay: .1s;
+}
+
+.main-nav-toggle.is-active .lines,
+.main-nav-toggle.is-active .lines:after,
+.main-nav-toggle.is-active .lines:before {
+    width: 0;
+}
+
+.main-nav-toggle.is-active .cross:before {
+    width: 19px;
+    transition-delay: 150ms;
+}
+
+.main-nav-toggle.is-active .cross-diagonal:after,
+.main-nav-toggle.is-active .cross-diagonal:before {
+    width: 7px;
+    transition-delay: 250ms;
+}
+
+.main-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.find-an-event-wrapper.map-view-enabled,
+.find-an-event-wrapper.map-view-enabled .find-an-event-footer .find-event-change-location-button,
+.find-an-event-wrapper.map-view-enabled .find-an-event-footer .text-bravo,
+.find-an-event-wrapper.map-view-enabled .find-an-event-footer .text-light,
+.text-inverted {
+    color: #fff;
+}
+
+.coverer {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 20%;
+}
+
+.navigation-image-1 {
+    background-image: url(images/1.jpg);
+    background-position-x: 50%;
+    left: 0;
+}
+
+.navigation-image-2 {
+    background-image: url(images/2.jpg);
+    background-position-x: 50%;
+    left: 20%;
+}
+
+.navigation-image-3 {
+    background-image: url(images/3.jpg);
+    background-position-x: 38%;
+    left: 40%;
+}
+
+.navigation-image-4 {
+    background-image: url(images/4.jpg);
+    background-position-x: 52%;
+    left: 60%;
+}
+
+.navigation-image-5 {
+    background-image: url(images/5.jpg);
+    background-position-x: 33%;
+    left: 80%;
+}
+
+.main-navigation-image {
+    clip: rect(0px auto 0px 0px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: clip 0.4s cubic-bezier(.62,.42,.63,.89);
+    -moz-transition: clip 0.4s cubic-bezier(.62,.42,.63,.89);
+    -o-transition: clip 0.4s cubic-bezier(.62,.42,.63,.89);
+    transition: clip 0.4s cubic-bezier(.59,.18,.66,.46);
+}
